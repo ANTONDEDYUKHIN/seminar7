@@ -36,16 +36,15 @@ void PrintMatrix(int[,] matrix)
         Console.WriteLine("]");
     }
 }
-bool FindPosMatrix(int a, int b);
+void FindPosMatrix(int[,] matrix)
 {
-if (a < 0 && a > matrix.GetLength(0) - 1
- && b < 0 && b > matrix.GetLength(1) - 1)
- {
-   Console.WriteLine("Элемент не существует");
- }
+    int c = a - 1;
+    int d = b - 1;
+if (c > 0 & c < matrix.GetLength(0)
+ && d > 0 && d < matrix.GetLength(1)) Console.WriteLine($"Значение элемента массива = {matrix [c, d]}");
     else
     {
-        Console.WriteLine($"Значение элемента массива = {matrix [a, b]}");
+        Console.WriteLine("Элемент не существует");
     }
 }
 
